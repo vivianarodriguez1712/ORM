@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Product, Category, Tag, ProductTag } = require('../../../models');
+const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
@@ -61,7 +61,7 @@ router.get('/:id', (req, res) => {
 // create new product
 router.post('/', (req, res) => {
   Product.create({
-    productName: req.body.product_name,
+    product_name: req.body.product_name,
     price: req.body.price,
     stock: req.body.stock,
     categoryId: req.body.category_id,
