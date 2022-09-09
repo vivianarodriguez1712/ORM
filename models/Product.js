@@ -15,12 +15,10 @@ Product.init(
       primaryKey: true,
       autoIncrement: true
     },
-    // define product_name column
     product_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    // define price column
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
@@ -28,7 +26,6 @@ Product.init(
         isDecimal: true
       }
     },
-    // define stock column
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -37,7 +34,6 @@ Product.init(
         isNumeric: true
       }
     },
-    // define category_id column
     category_id: {
       type: DataTypes.INTEGER,
       references: {
