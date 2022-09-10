@@ -68,6 +68,7 @@ router.post('/', (req, res) => {
     tagIds: req.body.tag_id,
   })
     .then((product) => {
+      console.log(req.body)
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
